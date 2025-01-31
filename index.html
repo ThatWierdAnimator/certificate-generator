@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Certificate Generator</title>
+</head>
+<body>
+    <section class="certificate" id="lil-guy">
+        <p>this certificate is awarded to</p>
+        <h1 class="name">PERSON'S NAME</h1>
+        <div class="images">
+            <img src="/images/toasting-meme.png" alt="toast">
+            <img src="/images/positive-social-credit.png" alt="positive social credit">
+            <div class="middle-top">
+                <img src="/images/yippee-guy.png" alt="yippee guy">
+            </div>
+        </div>
+        <p id="reason">for being a lil' guy :))</p>
+        <hr>
+        <p id="text">Thank you for your extreme dedication to the craft, you are truly in a league of your own</p>
+        <div class="images">
+            <img src="/images/wojak-pog.png" alt="wojak pog">
+            <div class="middle">
+                <p>Presented By:</p>
+                <h2 class="giver-name">Name</h2>
+                <h3 class="position">Position/Job</h3>
+                <img src="/images/thumbs-up.png" alt="thumbs up">
+            </div>
+            <img src="/images/wojak-point.png" alt="wojak point">
+        </div>
+        <p class="date">MM/DD/YY</p>
+    </section>
+    <section class="certificate hidden" id="huge-stinker">
+        <p>this certificate is awarded to</p>
+        <h1 class="name">PERSON'S NAME</h1>
+        <div class="images">
+            <img src="/images/dog-sus-look.png" alt="dog sus">
+            <img src="/images/negative-social-credit.png" alt="neagtive social credit">
+            <div class="middle-top">
+                <img src="/images/hampter.png" alt="hampter">
+            </div>
+        </div>
+        <p id="reason">for being a huge stinker >:(</p>
+        <hr>
+        <p id="text">It is impressive for sure, but I wouldn't brag</p>
+        <div class="images">
+            <img src="/images/angry-emoji.png" alt="angry emoji">
+            <div class="middle">
+                <p>Presented By:</p>
+                <h2 class="giver-name">Name</h2>
+                <h3 class="position">Position/Job</h3>
+                <img src="/images/disapointed-wojak.png" alt="disapointed wojak">
+            </div>
+            <img src="/images/crying-wojak.png" alt="crying wojak">
+        </div>
+        <p class="date">MM/DD/YY</p>
+    </section>
+    <section class="certificate hidden" id="enigma">
+        <p>this certificate is awarded to</p>
+        <h1 class="name">PERSON'S NAME</h1>
+        <div class="images">
+            <img src="/images/thinking-emoji.png" alt="thinking emoji">
+            <img src="/images/visible-confusion.png" alt="visible confusion">
+            <div class="middle-top">
+                <img src="/images/devious-lad.png" alt="devious lad">
+            </div>
+        </div>
+        <p id="reason">for being an enigma</p>
+        <hr>
+        <p id="text">i dont even know what an enigma is thats how good you are</p>
+        <div class="images">
+            <img src="/images/i-guess-emoji.png" alt="shoot i guess">
+            <div class="middle">
+                <p>Presented By:</p>
+                <h2 class="giver-name">Name</h2>
+                <h3 class="position">Position/Job</h3>
+                <img src="/images/the-thinker.png" alt="the thinker" height="200px">
+            </div>
+            <img src="/images/brain-chair.png" alt="wojak brain chair">
+        </div>
+        <p class="date">MM/DD/YY</p>
+    </section>
+    <main>
+        <h2>Templates:</h2>
+        <select name="Templates" id="templates">
+            <option value="lil-guy">lil' guy</option>
+            <option value="huge-stinker">huge stinker</option>
+            <option value="enigma">enigma</option>
+        </select>
+        <h2>Name:</h2>
+        <input type="text" placeholder="Person's Name" id="person-name">
+        <h2>Presented By:</h2>
+        <input type="text" placeholder="Giver's Name" id="giver-name">
+        <input type="text" placeholder="Position/Job" id="job">
+        <br><br>
+        <button id="print">Print</button>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
