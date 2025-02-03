@@ -30,6 +30,8 @@ body {
 .certificate h1 {
     margin: 0%;
     font-size: 4em;
+
+    text-transform: uppercase;
 }
 
 .images {
@@ -65,11 +67,12 @@ body {
 }
 
 hr {
+    display: block;
+    height: 2px;
+    background: transparent;
     width: 70%;
     border: none;
-    background-color: black;
-    color: black;
-    height: 2px;
+    border-top: solid 2px #000000;
 }
 
 .middle {
@@ -87,6 +90,7 @@ hr {
 
 .middle img {
     margin-top: auto;
+    width: 100%;
 }
 
 .date {
@@ -101,6 +105,8 @@ hr {
 }
 
 @media print {
+    @page {size: landscape}
+
     main {
         display: none;
     }

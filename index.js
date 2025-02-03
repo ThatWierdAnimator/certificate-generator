@@ -10,9 +10,15 @@ const job = document.getElementById('job');
 const person_name_elements = document.getElementsByClassName('name');
 const giver_name_elements = document.getElementsByClassName('giver-name');
 const job_elements = document.getElementsByClassName('position');
-const date = document.getElementById('date');
+const dates = document.getElementsByClassName('date');
 
 const print_button = document.getElementById('print');
+
+// Initialize the date with the date
+let date = new Date().toLocaleDateString('ig-ng');
+for (i=0;i<dates.length;i++) {
+    dates[i].innerHTML = date;
+}
 
 template.addEventListener('change', () => {
     if (template.value === 'lil-guy') {
@@ -52,5 +58,9 @@ job.addEventListener('change', () => {
 })
 
 print_button.addEventListener('click', () => {
+    date = new Date().toLocaleDateString('ig-ng');
+    for (i=0;i<dates.length;i++) {
+        dates[i].innerHTML = date;
+    }
     print();
 })
