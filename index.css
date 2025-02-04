@@ -17,8 +17,8 @@ body {
     align-items: center;
 
     border: 2px solid black;
-    width: 50%;
-    height: 70%;
+    width: 916px;
+    height: 50%;
 
     text-align: center;
 }
@@ -45,9 +45,10 @@ body {
     margin-bottom: 0;
 }
 
-.images:last-of-type {
+.images.bottom {
     width: 100%;
     height: 300px;
+    justify-self: flex-end;
 }
 
 .images img {
@@ -95,13 +96,22 @@ hr {
 
 .date {
     position: absolute;
-    margin: 16px;
+    margin: 2%;
     top: 0;
     right: 0;
 }
 
 .hidden {
     display: none;
+}
+
+[class|='sticker'] {
+    position: absolute;
+    cursor: grab;
+}
+
+[class|='sticker']:active {
+    cursor: grabbing;
 }
 
 @media print {
