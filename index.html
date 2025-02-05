@@ -31,19 +31,19 @@
             <img src="/images/wojak-point.png" alt="wojak point">
         </div>
         <p class="date">MM/DD/YY</p>
-        <div class="sticker-1">
+        <div class="sticker-1 hidden">
             <img src="/images/hampter.png" alt="hampter" draggable="false">
         </div>
-        <div class="sticker-2">
+        <div class="sticker-2 hidden">
             <img src="/images/angry-emoji.png" alt="hampter" draggable="false">
         </div>
-        <div class="sticker-3">
+        <div class="sticker-3 hidden">
             <img src="/images/dog-sus-look.png" alt="hampter" draggable="false">
         </div>
-        <div class="sticker-4">
+        <div class="sticker-4 hidden">
             <img src="/images/devious-lad.png" alt="hampter" draggable="false">
         </div>
-        <div class="sticker-5">
+        <div class="sticker-5 hidden">
             <img src="/images/yippee-guy.png" alt="hampter" draggable="false">
         </div>
     </section>
@@ -71,19 +71,19 @@
             <img src="/images/crying-wojak.png" alt="crying wojak">
         </div>
         <p class="date">MM/DD/YY</p>
-        <div class="sticker-1">
+        <div class="sticker-1 hidden">
             <img src="/images/hampter.png" alt="hampter" draggable="false">
         </div>
-        <div class="sticker-2">
+        <div class="sticker-2 hidden">
             <img src="/images/angry-emoji.png" alt="hampter" draggable="false">
         </div>
-        <div class="sticker-3">
+        <div class="sticker-3 hidden">
             <img src="/images/dog-sus-look.png" alt="hampter" draggable="false">
         </div>
-        <div class="sticker-4">
+        <div class="sticker-4 hidden">
             <img src="/images/devious-lad.png" alt="hampter" draggable="false">
         </div>
-        <div class="sticker-5">
+        <div class="sticker-5 hidden">
             <img src="/images/yippee-guy.png" alt="hampter" draggable="false">
         </div>
     </section>
@@ -111,19 +111,19 @@
             <img src="/images/brain-chair.png" alt="wojak brain chair">
         </div>
         <p class="date">MM/DD/YY</p>
-        <div class="sticker-1">
+        <div class="sticker-1 hidden">
             <img src="/images/hampter.png" alt="hampter" draggable="false">
         </div>
-        <div class="sticker-2">
+        <div class="sticker-2 hidden">
             <img src="/images/angry-emoji.png" alt="hampter" draggable="false">
         </div>
-        <div class="sticker-3">
+        <div class="sticker-3 hidden">
             <img src="/images/dog-sus-look.png" alt="hampter" draggable="false">
         </div>
-        <div class="sticker-4">
+        <div class="sticker-4 hidden">
             <img src="/images/devious-lad.png" alt="hampter" draggable="false">
         </div>
-        <div class="sticker-5">
+        <div class="sticker-5 hidden">
             <img src="/images/yippee-guy.png" alt="hampter" draggable="false">
         </div>
     </section>
@@ -139,7 +139,32 @@
         <h2>Presented By:</h2>
         <input type="text" placeholder="Giver's Name" id="giver-name" maxlength="19">
         <input type="text" placeholder="Position/Job" id="job" maxlength="25">
-        <br><br>
+        <h2>Stickers:</h2>
+        <section id="sticker-1-input">
+            <h3>Sticker 1:</h3>
+            <input type="checkbox" id="sticker-1-toggle">
+            <select id="sticker-1-select">
+                <option value="angry-emoji.png">angry emoji</option>
+                <option value="brain-chair.png">brain chair wojak</option>
+                <option value="crying-wojak.png">crying wojak</option>
+                <option value="devious-lad.png">devious lad</option>
+                <option value="disapointed-wojak.png">disapointed wojak</option>
+                <option value="dog-sus-look.png">suspicous doggo</option>
+                <option value="hampter.png">hampter</option>
+                <option value="i-guess-emoji.png">i guess</option>
+                <option value="negative-social-credit.png">negative social credit</option>
+                <option value="positive-social-credit.png">positive social credit</option>
+                <option value="the-thinker.png">the thinker</option>
+                <option value="thinking-emoji.png">thinking emoji</option>
+                <option value="thumbs-up.png">thumbs up</option>
+                <option value="toasting-meme.png">toasting guy</option>
+                <option value="visible-confusion.png">visible confusion</option>
+                <option value="wojak-pog.png">wojak pog</option>
+                <option value="wojak-point.png">wojak point</option>
+                <option value="yippee-guy.png">yippee guy</option>
+            </select>
+        </section>
+        <br>
         <button id="print">Print</button>
     </main>
     <script src="index.js"></script>
