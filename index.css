@@ -106,13 +106,14 @@ hr {
 }
 
 [class|='sticker'] {
-    width: 100px;
     position: absolute;
     cursor: grab;
+    width: 10%;
 }
 
 [class|='sticker'] img {
-    width: 100px;
+    height: auto;
+    width: 100%;
 }
 
 [class|='sticker']:active {

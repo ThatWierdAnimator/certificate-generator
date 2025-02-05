@@ -37,25 +37,25 @@ template.addEventListener('change', () => {
         lil_guy.classList.add('hidden');
         huge_stinker.classList.add('hidden');
     }
-})
+});
 
 person_name.addEventListener('change', () => {
     for (i=0;i<person_name_elements.length;i++) {
         person_name_elements[i].innerHTML = person_name.value;
     }
-})
+});
 
 giver_name.addEventListener('change', () => {
     for (i=0;i<giver_name_elements.length;i++) {
         giver_name_elements[i].innerHTML = giver_name.value;
     }
-})
+});
 
 job.addEventListener('change', () => {
     for (i=0;i<job_elements.length;i++) {
         job_elements[i].innerHTML = job.value;
     }
-})
+});
 
 print_button.addEventListener('click', () => {
     date = new Date().toLocaleDateString('ig-ng');
@@ -63,4 +63,4 @@ print_button.addEventListener('click', () => {
         dates[i].innerHTML = date;
     }
     print();
-})
+});
