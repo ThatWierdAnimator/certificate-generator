@@ -72,8 +72,11 @@ template.addEventListener('change', () => {
 });
 
 function stickToMouse() {
-    let left = (certificateWidth - (mouseCoords.x * -1 + 1550)) / certificateWidth;
-    left = `${left * 100}%`;
+    // We first shift the mouse coordinates right because of the padding on the left of the certificate
+    // The shift is the screen width minus the width of the certificate divided by 2 plus the margin of the body
+    // We take that number and divide it by the certificate width to get the percent left of the sticker
+    let left = mouseCoords.x - (window.screen.width - certificateWidth) / 2 + 8;
+    left = `${left / certificateWidth * 100}%`;
     scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
 
     stickerProcess(sticker1, left);
@@ -97,12 +100,11 @@ function stickerProcess(sticker, left) {
                 left = 0;
             }
 
-            let top = mouseCoords.y - 20 + scrollTop;
-            let offset = 4.5;
+            let top = mouseCoords.y - 8 + scrollTop;
             if (top < 0) {
                 top = 0;
-            } else if (top > certificateHeight - sticker.obj[i].clientHeight + offset) {
-                top = certificateHeight - sticker.obj[i].clientHeight + offset;
+            } else if (top > certificateHeight - sticker.obj[i].clientHeight) {
+                top = certificateHeight - sticker.obj[i].clientHeight;
             }
 
             sticker.obj[i].style = `left: ${left}; top: ${top}px; width: ${sticker.width}%`;
@@ -125,10 +127,15 @@ sticker1_input.toggle.addEventListener('change', () => {
 });
 
 sticker1_input.img.addEventListener('change', () => {
-    sticker1.obj[0].children[0].src = `/images/${sticker1_input.img.value}`;
+    for (i=0;i<sticker1.obj.length;i++) {
+        sticker1.obj[i].children[0].src = `/images/${sticker1_input.img.value}`;
+    }
 });
 
 sticker1_input.size.addEventListener('change', () => {
+    if (sticker1_input.size.value > 100) {
+        sticker1_input.size.value = 100;
+    }
     for (i=0;i<sticker1.obj.length;i++) {
         sticker1.width = sticker1_input.size.value;
         sticker1.obj[i].style.width = `${sticker1_input.size.value}%`;
@@ -150,10 +157,15 @@ sticker2_input.toggle.addEventListener('change', () => {
 });
 
 sticker2_input.img.addEventListener('change', () => {
-    sticker2.obj[0].children[0].src = `/images/${sticker2_input.img.value}`;
+    for (i=0;i<sticker2.obj.length;i++) {
+        sticker2.obj[i].children[0].src = `/images/${sticker2_input.img.value}`;
+    }
 });
 
 sticker2_input.size.addEventListener('change', () => {
+    if (sticker2_input.size.value > 100) {
+        sticker2_input.size.value = 100;
+    }
     for (i=0;i<sticker2.obj.length;i++) {
         sticker2.width = sticker2_input.size.value;
         sticker2.obj[i].style.width = `${sticker2_input.size.value}%`;
@@ -175,10 +187,15 @@ sticker3_input.toggle.addEventListener('change', () => {
 });
 
 sticker3_input.img.addEventListener('change', () => {
-    sticker3.obj[0].children[0].src = `/images/${sticker3_input.img.value}`;
+    for (i=0;i<sticker3.obj.length;i++) {
+        sticker3.obj[i].children[0].src = `/images/${sticker3_input.img.value}`;
+    }
 });
 
 sticker3_input.size.addEventListener('change', () => {
+    if (sticker3_input.size.value > 100) {
+        sticker3_input.size.value = 100;
+    }
     for (i=0;i<sticker3.obj.length;i++) {
         sticker3.width = sticker3_input.size.value;
         sticker3.obj[i].style.width = `${sticker3_input.size.value}%`;
@@ -200,10 +217,15 @@ sticker4_input.toggle.addEventListener('change', () => {
 });
 
 sticker4_input.img.addEventListener('change', () => {
-    sticker4.obj[0].children[0].src = `/images/${sticker4_input.img.value}`;
+    for (i=0;i<sticker4.obj.length;i++) {
+        sticker4.obj[i].children[0].src = `/images/${sticker4_input.img.value}`;
+    }
 });
 
 sticker4_input.size.addEventListener('change', () => {
+    if (sticker4_input.size.value > 100) {
+        sticker4_input.size.value = 100;
+    }
     for (i=0;i<sticker4.obj.length;i++) {
         sticker4.width = sticker4_input.size.value;
         sticker4.obj[i].style.width = `${sticker4_input.size.value}%`;
@@ -225,10 +247,15 @@ sticker5_input.toggle.addEventListener('change', () => {
 });
 
 sticker5_input.img.addEventListener('change', () => {
-    sticker5.obj[0].children[0].src = `/images/${sticker5_input.img.value}`;
+    for (i=0;i<sticker5.obj.length;i++) {
+        sticker5.obj[i].children[0].src = `/images/${sticker5_input.img.value}`;
+    }
 });
 
 sticker5_input.size.addEventListener('change', () => {
+    if (sticker5_input.size.value > 100) {
+        sticker5_input.size.value = 100;
+    }
     for (i=0;i<sticker5.obj.length;i++) {
         sticker5.width = sticker5_input.size.value;
         sticker5.obj[i].style.width = `${sticker5_input.size.value}%`;

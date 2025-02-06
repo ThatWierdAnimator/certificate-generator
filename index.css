@@ -30,6 +30,7 @@ body {
 .certificate h1 {
     margin: 0%;
     font-size: 4em;
+    height: 74px;
 
     text-transform: uppercase;
 }
@@ -74,6 +75,11 @@ hr {
     width: 70%;
     border: none;
     border-top: solid 2px #000000;
+}
+
+.position {
+    font-weight: 400;
+    font-size: 1em;
 }
 
 .middle {
