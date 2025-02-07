@@ -126,6 +126,16 @@ hr {
     cursor: grabbing;
 }
 
+.signature {
+    font-size: 0.8em;
+
+    position: absolute;
+    right: 0;
+    bottom: -535px;
+    padding-bottom: 8px;
+    padding-right: 8px;
+}
+
 @media print {
     @page {size: landscape}
 
